@@ -1,0 +1,35 @@
+version: "3.7"
+
+services:
+  mongo-node-1:
+    image: mongo:7.0.5
+    container_name: mongo-node-1
+    ports:
+      - 27019:27017
+    volumes:
+      - ./data/db:/data/db
+      - ./logs:/var/log/mongodb
+      - ./mongodb-keyfile.key:/etc/mongodb-keyfile.key
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: bobby
+      MONGO_INITDB_ROOT_PASSWORD: bobby
+      MONGO_INITDB_REPLICA_SET_NAME: ordering-db-set
+      MONGO_INITDB_DATABASE: admin
+    command:
+      - /bin/sh
+      - -c
+      - |
+        chmod 400 /etc/mongodb-keyfile.key
+        chown 999:999 /etc/mongodb-keyfile.key
+        mongod --replSet ordering-db-set --bind_ip_all --auth --keyFile /etc/mongodb-keyfile.key
+    networks:
+      ordering-db-net:
+        ipv4_address: 192.168.10.101 # 手动分配一个固定 IP
+
+networks:
+  ordering-db-net:
+    driver: bridge
+    name: ordering-db-net
+    ipam:
+      config:
+        - subnet: 192.168.10.0/24

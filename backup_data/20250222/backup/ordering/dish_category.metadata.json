@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"7c1f74355ead4e18845b09eb14773904","collectionName":"dish_category","type":"collection"}

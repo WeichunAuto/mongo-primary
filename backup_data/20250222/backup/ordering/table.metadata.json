@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"},{"v":{"$numberInt":"2"},"key":{"merchant_id":{"$numberInt":"1"}},"name":"merchant_id"},{"v":{"$numberInt":"2"},"key":{"area_id":{"$numberInt":"1"}},"name":"area_id"}],"uuid":"ebd046d024f34509a47e6a1bc1ee6470","collectionName":"table","type":"collection"}
