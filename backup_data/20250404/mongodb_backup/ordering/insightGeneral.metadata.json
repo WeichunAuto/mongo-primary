@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"},{"v":{"$numberInt":"2"},"key":{"date":{"$numberInt":"1"}},"name":"date","unique":true}],"uuid":"27611866986d4b1ea6eafd14c6901c4f","collectionName":"insightGeneral","type":"collection"}

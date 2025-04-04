@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"},{"v":{"$numberInt":"2"},"key":{"merchant_id":{"$numberInt":"1"}},"name":"merchant_id"}],"uuid":"6688fdeb98e146a9916684ced5ab7b49","collectionName":"home_carousel","type":"collection"}
